@@ -1,0 +1,15 @@
+# .NET
+bin/
+obj/
+*.db
+
+# Node / Angular
+node_modules/
+dist/
+
+# VS Code / macOS
+.vscode/
+.DS_Store
+
+# Docker data
+_data/
