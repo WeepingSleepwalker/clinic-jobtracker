@@ -1,8 +1,5 @@
 ```mermaid
-graph LR
-  A[Client] --> B[API Gateway]
-  B --> C[API Server]
-  C --> D[(Database)]
+
  graph LR
   %% LAYOUT
   %% LR = left-to-right, TB = top-to-bottom
