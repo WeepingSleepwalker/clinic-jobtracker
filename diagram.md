@@ -3,27 +3,27 @@ graph LR
   classDef box fill:#fff,stroke:#333,stroke-width:1px,rx:8,ry:8;
 
   subgraph Client
-    C1[Web / Mobile Client]:::box
+    C1["Web / Mobile Client"]:::box
   end
 
   subgraph Edge
-    E1[API Gateway / Load Balancer]:::box
+    E1["API Gateway / Load Balancer"]:::box
   end
 
   subgraph API["API Service"]
-    A1[Auth Middleware (JWT/OAuth2)]:::box
-    Ctl[Controllers / Route Handlers]:::box
-    Svc[Service Layer (Business Logic)]:::box
-    Repo[Repository / Data Access]:::box
+    A1["Auth Middleware (JWT / OAuth2)"]:::box
+    Ctl["Controllers / Route Handlers"]:::box
+    Svc["Service Layer (Business Logic)"]:::box
+    Repo["Repository / Data Access"]:::box
   end
 
   subgraph Infra["Infrastructure"]
     DB[(Primary DB)]:::box
-    Cache[(Cache: Redis)]:::box
+    Cache["Cache: Redis"]:::box
     MQ[[Message Queue]]:::box
-    Ext[[External Service / 3rd-Party API]]:::box
-    Obj[(Object Storage / CDN)]:::box
-    Obs[Observability (Logs/Metrics/Tracing)]:::box
+    Ext["External Service / 3rd-Party API"]:::box
+    Obj["Object Storage / CDN"]:::box
+    Obs["Observability (Logs / Metrics / Tracing)"]:::box
   end
 
   C1 --> E1 --> A1 --> Ctl --> Svc --> Repo --> DB
